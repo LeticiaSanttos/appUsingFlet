@@ -1,4 +1,4 @@
-flet==0.8.2
+flet==0.9.0
 playsound==1.2.2
 Pyrebase4==4.7.1
 pytesseract==0.3.10
