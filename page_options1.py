@@ -12,7 +12,7 @@ def main(page):
         
 
     img_audio_to_txt = ft.Image(
-        src="images/writting.png",
+        src=f"images/writting.png",
         width=80,
         height=80,
         color= "#A11D8A",
@@ -28,7 +28,7 @@ def main(page):
         )
 
     img_txt_to_audio = ft.Image(
-        src="images/speaking.png",
+        src=f"images/speaking.png",
         width=80,
         height=80,
         color= "#A11D8A",    
@@ -44,7 +44,7 @@ def main(page):
         )
 
     img_translate = ft.Image(
-        src="images/translation.png",
+        src=f"images/translation.png",
         width=100,
         height=100,
         color= "#A11D8A",
