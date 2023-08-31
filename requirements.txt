@@ -4,4 +4,3 @@ Pyrebase4==4.7.1
 pytesseract==0.3.10
 translate==3.6.1
 gTTS==2.3.2
-language-tool-python==2.7.1
