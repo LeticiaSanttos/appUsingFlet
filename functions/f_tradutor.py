@@ -2,7 +2,8 @@ from translate import Translator
 import translate
 import gtts
 from playsound import playsound
-from langdetect import detect
+#from langdetect import detect
+#from textblob import TextBlob
 import time
 import sys
 #sys.path.insert(1, "./functions")
@@ -28,8 +29,7 @@ class Tradutor():
       idioma = cd_idioma[idioma_selected]
 
       return idioma
-
-
+    
 
     def traduzir(self):
         #detecta de qual lingua pertence essa frase

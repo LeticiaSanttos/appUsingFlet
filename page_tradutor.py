@@ -51,7 +51,9 @@ def main(page: ft.Page):
 
     def exibeAudio(e):
         print('audio')
-        ad.audiodescricao(txt_traduzido.value)
+        idioma = td.Tradutor.verifica_idioma(to_lang)
+        print(idioma)
+        ad.audiodescricao(txt_traduzido.value, idioma)
         
 
     def terminou_de_digitar(e):
@@ -64,7 +66,7 @@ def main(page: ft.Page):
 
     def traduz(e): 
         if frase.value != "":
-            #time.sleep(1.5)
+            time.sleep(1.5)
             if terminou_de_digitar(e) == True:
                 traducao = td.Tradutor(td.Tradutor.verifica_idioma(from_lang),td.Tradutor.verifica_idioma(to_lang), frase.value)
                 txt_traduzido.value = traducao.traduzir()

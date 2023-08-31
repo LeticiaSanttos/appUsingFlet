@@ -198,5 +198,5 @@ def main(page: ft.Page):
     page.on_view_pop = view_pop
     page.go(page.route)
     page.update()
-ft.app(target=main)
+ft.app(target=main, assets_dir="assets")
 #ft.app(target=main, view=ft.WEB_BROWSER)

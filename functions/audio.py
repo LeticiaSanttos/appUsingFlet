@@ -1,16 +1,16 @@
 import gtts
 from playsound import playsound
-from langdetect import detect
+#from langdetect import detect
+
 import os
 
 #passa os parametros para o audia
-def audiodescricao(resp):
-   idioma = detect(resp)
-
+def audiodescricao(resp, idioma):
+   
    fala = gtts.gTTS(resp, lang=idioma)
 #salva o audio
    
-   caminho = r"audio/fala.mp3"
+   caminho = r"assets/audio/fala.mp3"
    fala.save(caminho)
 #executa o audio
 
