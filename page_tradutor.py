@@ -53,7 +53,7 @@ def main(page: ft.Page):
         print('audio')
         idioma = td.Tradutor.verifica_idioma(to_lang)
         print(idioma)
-        ad.audiodescricao(txt_traduzido.value, idioma)
+        ad.audiodescricao(txt_traduzido.value)
         
 
     def terminou_de_digitar(e):

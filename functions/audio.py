@@ -5,9 +5,9 @@ from playsound import playsound
 import os
 
 #passa os parametros para o audia
-def audiodescricao(resp, idioma):
+def audiodescricao(resp):
    
-   fala = gtts.gTTS(resp, lang=idioma)
+   fala = gtts.gTTS(resp, lang='pt-br')
 #salva o audio
    
    caminho = r"assets/audio/fala.mp3"

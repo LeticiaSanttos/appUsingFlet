@@ -3,6 +3,7 @@ import page_cadastrar
 import page_options1
 import page_tradutor
 import page_audiodescricao
+import page_transcricao
 #import pyrebase
 
 # firebaseConfig = {
@@ -187,6 +188,10 @@ def main(page: ft.Page):
             page.views.append(
                 page_audiodescricao.main(page)
             )
+        if page.route == "/page_transcricao":
+            page.views.append(
+                page_transcricao.main(page)
+            )
         page.update()
 
     def view_pop(view):
@@ -199,4 +204,4 @@ def main(page: ft.Page):
     page.go(page.route)
     page.update()
 ft.app(target=main, assets_dir="assets")
-#ft.app(target=main, view=ft.WEB_BROWSER)
+#ft.app(target=main, assets_dir="assets", view=ft.WEB_BROWSER)

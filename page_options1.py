@@ -9,6 +9,10 @@ def main(page):
     def go_to_audiodescricao(e):
         page.route = "/page_audio"
         page.update()
+
+    def go_to_transcricao(e):
+        page.route = "/page_transcricao"
+        page.update()
         
 
     img_audio_to_txt = ft.Image(
@@ -21,6 +25,7 @@ def main(page):
 
     btn_audio_to_txt = ft.ElevatedButton(
         text="Converter Áudio em Texto", 
+        on_click= go_to_transcricao,
         width=250,
         bgcolor="#6800E3",
         color=ft.colors.WHITE
@@ -89,9 +94,7 @@ def main(page):
     container_btn_translate = ft.Container(
         content=btn_translate,
         alignment=ft.alignment.center,
-    )
-
-    
+    )  
 
     coluna = ft.Column(
         controls=[container_audio_to_txt, 
@@ -112,31 +115,6 @@ def main(page):
         border_radius=25,
         bgcolor= "#260053"
     )
-
-    # def route_change(route):
-    #     page.views.clear()
-    #     page.views.append(
-    #         ft.View(
-    #             "/",
-    #             [
-    #                 main_container
-    #             ],
-    #         )
-    #     )
-    #     if page.route == "/page_tradutor":
-    #         page.views.append(
-    #             page_tradutor.main(page)
-    #         )
-    #     page.update()
-
-    # def view_pop(view):
-    #     page.views.pop()
-    #     top_view = page.views[-1]
-    #     page.go(top_view.route)
-
-    # page.on_route_change = route_change
-    # page.on_view_pop = view_pop
-    # page.go(page.route)
 
     view = ft.View(
         "/page_options",

@@ -3,6 +3,7 @@ import page_cadastrar
 import page_options1
 import page_tradutor
 import page_audiodescricao
+import page_transcricao
 import pyrebase
 import time
 
@@ -207,6 +208,10 @@ def main(page: ft.Page):
         if page.route == "/page_audio":
             page.views.append(
                 page_audiodescricao.main(page)
+            )
+        if page.route == "/page_transcricao":
+            page.views.append(
+                page_transcricao.main(page)
             )
         page.update()
 
